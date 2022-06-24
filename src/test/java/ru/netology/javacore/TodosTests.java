@@ -1,18 +1,15 @@
 package ru.netology.javacore;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TodosTests {
     private static Todos todos;
     private static String task;
 
-    @BeforeAll
-    public static void createList() {
+    @BeforeEach
+    public void createList() {
         todos = new Todos();
         task = "Пробежка";
         todos.getTodos().add(task);
